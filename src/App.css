@@ -13,6 +13,10 @@
   box-sizing: border-box; /* Ensures padding and border don't affect the overall size of elements */
 }
 
+a {
+  text-decoration: none;
+}
+
 body, .App, .logo, button, .wallet-prompt, .wallet-header, .wallet-subtext, .menu-item {
   font-family: var(--font-main);
 }
@@ -60,129 +64,6 @@ button.connected {
   right: 20px;
 }
 
-/* Container styles for both wallet and about sections */
-.container-style {
-  width: calc(75% - 80px);
-  margin: 0 auto;
-  padding: 50px;
-  background-color: rgba(255, 255, 255, 0.1);
-  color: var(--text-color);
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  box-sizing: border-box;
-  position: relative;
-  top: 200px;
-  left: 0;
-  max-height: 30vh;
-  overflow-y: auto;
-}
-
-.wallet-container, .about-container {
-  composes: container-style; /* This applies styles from .container-style */
-}
-
-.wallet-prompt, .wallet-header, .wallet-subtext {
-  text-align: center;
-  margin-top: 10px;
-}
-
-.wallet-header {
-  margin-top: 0;
-  font-size: 20px;
-  font-weight: 600;
-}
-
-.wallet-subtext {
-  font-size: 16px;
-  font-weight: 400;
-  max-width: 40vw;
-  text-align: left;
-  padding-bottom: 1rem;
-}
-
-/* Menu styles */
-.menu {
-  width: 20%;
-  padding-left: 20px;
-  padding-top: 180px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  position: relative;
-  border-right: 1px solid rgba(201, 196, 196, 0.3);
-}
-
-.menu-item {
-  font-weight: 600;
-  font-size: 20px;
-  color: white;
-  cursor: pointer;
-  transition: color 0.3s;
-  margin: 8px 0;
-  padding: 16px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.menu-item.active {
-  color: var(--primary-color);
-}
-
-.menu-item:hover {
-  color: #27ada2;
-}
-
-.menu-item img {
-  width: 24px;
-  height: 24px;
-  transition: filter 0.3s;
-}
-
-.menu-item.active img {
-  filter: brightness(1.2);
-}
-
-/* Information styles */
-.about-container h2, .about-container p {
-  font-size: 24px;
-  color: white;
-}
-
-.about-container h2 {
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.about-container p {
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-.about-container, .settings-container {
-  /* Remove properties that are duplicated with .container-style */
-  border-radius: 10px;
-  padding: 20px;
-  width: 80%;
-  margin: 40px auto;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  position: absolute;
-  top: 175px;
-  left: 10%;
-}
-
-.lp-viewer-container {
-  color: white; 
-  font-weight: bold; 
-  display: flex; 
-  justify-content: center; 
-  align-items: center; 
-  height: 100vh; 
-  text-align: center; 
-}
 
 .token-list {
   display: flex;
@@ -204,13 +85,4 @@ button.connected {
   height: 30px;
   margin-right: 10px;
   vertical-align: middle;
-}
-.dashboard-container {
-  background: rgba(0, 0, 0, 0.5); 
-  position: relative; 
-  top: calc(50% - 570px);
-  padding: 20px 40px; 
-  border-radius: 10px; 
-  display: inline-flex; 
-  align-items: center; 
 }
